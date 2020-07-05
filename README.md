@@ -4,9 +4,10 @@
 * [Installation](#installation)
 * [PiHole configuration](#pihole)
 * [Check DNS](#check)
+<br>
 
 ## Overview
-<b>Preconfigured deb for every Raspberry Pi and PiHole to use encrypted DNS transport with 1.1.1.1</b><br><br><br>
+<b>Preconfigured deb for every Raspberry Pi and PiHole to use encrypted DNS transport with 1.1.1.1</b><br><br>
 
 ## Installation
 ```bash
