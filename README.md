@@ -2,12 +2,12 @@
 
 * [Overview](#overview)
 * [Installation](#installation)
-* [PiHole configuration](#pihole)
+* [Pi-hole configuration](#pi-hole)
 * [Check DNS](#check)
 <br>
 
 ## Overview
-<b>Preconfigured deb for every Raspberry Pi and PiHole to use encrypted DNS transport with 1.1.1.1</b><br><br>
+<b>Preconfigured deb for every Raspberry Pi and Pi-hole to use encrypted DNS transport with 1.1.1.1</b><br><br>
 
 ## Installation
 ```bash
@@ -16,7 +16,7 @@ dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb
 ```
 dnscrypt-proxy-pihole NO NEED CONFIGURATION!<br><br>
 
-## PiHole
+## Pi-hole
 <img src="https://i.postimg.cc/wvCYFsRy/pihole1.png"><br>
 <img src="https://i.postimg.cc/XN5bqxtw/pihole2.png"><br><br>
 
