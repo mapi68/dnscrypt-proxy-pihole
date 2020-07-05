@@ -17,7 +17,7 @@ dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb
 dnscrypt-proxy-pihole NO NEED CONFIGURATION!<br><br>
 
 ## Pi-hole
-<img src="https://i.postimg.cc/wvCYFsRy/pihole1.png"><br>
+<img src="https://i.postimg.cc/V6Dmd0r3/pihole1.png"><br>
 <img src="https://i.postimg.cc/XN5bqxtw/pihole2.png"><br><br>
 
 ## Check
