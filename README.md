@@ -3,7 +3,6 @@
 * [Overview](#overview)
 * [Installation](#installation)
 * [Configuration](#configuration)
-<br>
 
 ## Overview
 <b>Preconfigured deb for every Raspberry Pi and Pi-hole to use encrypted Cloudflare DNS</b><br>
