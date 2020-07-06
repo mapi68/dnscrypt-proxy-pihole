@@ -25,7 +25,7 @@ dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb
 <img src="https://i.postimg.cc/XN5bqxtw/pihole2.png"><br><br>
 
 Check if everything is fine here: https://www.cloudflare.com/ssl/encrypted-sni/
-<img src="https://i.postimg.cc/90y5kFyx/cloudflared.png"><br>
+<img src="https://i.postimg.cc/zvQ2xzZ3/check.png"><br>
 
 To change DNS server:
 ```bash
