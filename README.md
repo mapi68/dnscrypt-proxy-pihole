@@ -7,7 +7,7 @@
 ## Overview
 <b>Preconfigured deb for every Raspberry Pi and Pi-hole to use encrypted Cloudflare DNS</b><br>
 You have these options:
-1) Standard DNS 1.1.1.1 / 1.0.0.1 (best choose)
+1) Standard DNS 1.1.1.1 / 1.0.0.1 (best choice)
 2) DNS with malware blocking 1.1.1.2 / 1.0.0.2
 3) DNS with malware protection and parental control 1.1.1.3 / 1.0.0.3
 <br><br>
