@@ -15,7 +15,7 @@ You have these options:
 ## Installation
 ```bash
 wget https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/dnscrypt-proxy-pihole_2.0.44_armhf.deb
-dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb
+dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb; apt install -f -y
 ```
 <br>
 
