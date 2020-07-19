@@ -21,8 +21,8 @@ dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb; apt install -f -y
 
 ## Configuration
 <img src="https://i.postimg.cc/rpPLBkkX/cloudflare.png"><br>
-<img src="https://i.postimg.cc/90jJx2BB/pihole1.png"><br>
-<img src="https://i.postimg.cc/XN5bqxtw/pihole2.png"><br><br>
+<img src="https://i.postimg.cc/ZqTsHhnG/pihole1.png"><br>
+<img src="https://i.postimg.cc/CKmP66fz/pihole2.png"><br><br>
 
 Check if everything is fine here: https://www.cloudflare.com/ssl/encrypted-sni/
 <img src="https://i.postimg.cc/zvQ2xzZ3/check.png"><br>
