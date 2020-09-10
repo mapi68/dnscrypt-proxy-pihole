@@ -20,7 +20,7 @@ sudo dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb; sudo apt install -f -y
 
 To change DNS server:
 ```bash
-dpkg-reconfigure dnscrypt-proxy-pihole
+sudo dpkg-reconfigure dnscrypt-proxy-pihole
 ```
 
 
