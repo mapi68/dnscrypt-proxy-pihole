@@ -17,7 +17,12 @@ You have these options:
 wget https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/dnscrypt-proxy-pihole_2.0.44_armhf.deb
 sudo dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb; sudo apt install -f -y
 ```
-<br>
+
+To change DNS server:
+```bash
+dpkg-reconfigure dnscrypt-proxy-pihole
+```
+
 
 ## Configuration
 <img src="https://i.postimg.cc/rpPLBkkX/cloudflare.png"><br>
@@ -26,8 +31,3 @@ sudo dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb; sudo apt install -f -y
 
 Check if everything is fine here: https://www.cloudflare.com/ssl/encrypted-sni/
 <img src="https://i.postimg.cc/zvQ2xzZ3/check.png"><br>
-
-To change DNS server:
-```bash
-dpkg-reconfigure dnscrypt-proxy-pihole
-```
