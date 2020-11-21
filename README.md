@@ -25,9 +25,9 @@ sudo dpkg-reconfigure dnscrypt-proxy-pihole
 
 
 ## Configuration
-<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/cloudflare.png"><br>
-<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/pihole1.png"><br>
-<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/pihole2.png"><br><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/cloudflare.png"><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole1.png"><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole2.png"><br><br>
 
 Check if everything is fine here: https://www.cloudflare.com/ssl/encrypted-sni/
-<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/check.png"><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/check.png"><br>
