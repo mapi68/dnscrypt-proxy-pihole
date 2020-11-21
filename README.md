@@ -15,7 +15,7 @@ You have these options:
 ## Installation
 ```bash
 wget -P /tmp/ https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/dnscrypt-proxy-pihole_2.0.44_armhf.deb
-sudo dpkg -i dnscrypt-proxy-pihole_2.0.44_armhf.deb; sudo apt install -f -y; rm /tmp/dnscrypt-proxy-pihole_2.0.44_armhf.deb
+sudo dpkg -i /tmp/dnscrypt-proxy-pihole_2.0.44_armhf.deb; sudo apt install -f -y; rm /tmp/dnscrypt-proxy-pihole_2.0.44_armhf.deb
 ```
 
 To change DNS server:
@@ -25,9 +25,9 @@ sudo dpkg-reconfigure dnscrypt-proxy-pihole
 
 
 ## Configuration
-<img src="https://i.postimg.cc/rpPLBkkX/cloudflare.png"><br>
-<img src="https://i.postimg.cc/ZqTsHhnG/pihole1.png"><br>
-<img src="https://i.postimg.cc/CKmP66fz/pihole2.png"><br><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/cloudflare.png"><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/pihole1.png"><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/pihole2.png"><br><br>
 
 Check if everything is fine here: https://www.cloudflare.com/ssl/encrypted-sni/
-<img src="https://i.postimg.cc/zvQ2xzZ3/check.png"><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/check.png"><br>
