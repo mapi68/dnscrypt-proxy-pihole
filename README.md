@@ -14,7 +14,8 @@ You have these options:
 
 ## Installation
 ```bash
-curl -sSfL https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/dnscrypt-proxy-pihole-install | bash
+wget -P /tmp/ https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/dnscrypt-proxy-pihole_latest_armhf.deb
+sudo apt install -qq -y /tmp/dnscrypt-proxy-pihole_latest_armhf.deb; rm -rf /tmp/dnscrypt-proxy-pihole_latest_armhf*
 ```
 
 To change DNS server:
