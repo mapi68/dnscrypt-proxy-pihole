@@ -5,29 +5,13 @@
 * [Configuration](#configuration)
 
 ## Overview
-<b>Preconfigured deb package for every Raspberry Pi and Pi-hole to use encrypted Cloudflare DNS</b><br>
-You have these options:
-1) Standard DNS 1.1.1.1 / 1.0.0.1 (best choice)
-2) DNS with malware blocking 1.1.1.2 / 1.0.0.2
-3) DNS with malware protection and parental control 1.1.1.3 / 1.0.0.3
-<br><br>
+<b>Preconfigured deb package for every Raspberry Pi and Pi-hole to use only best dnscrypt , DNS-over-HTTPS and no log servers</b><br>
 
 ## Installation
 ```bash
-wget -P /tmp/ https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/dnscrypt-proxy-pihole_latest_armhf.deb
-sudo apt install -qq -y /tmp/dnscrypt-proxy-pihole_latest_armhf.deb; rm -rf /tmp/dnscrypt-proxy-pihole_latest_armhf*
+curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master/-install | bash
 ```
-
-To change DNS server:
-```bash
-sudo dpkg-reconfigure dnscrypt-proxy-pihole
-```
-
 
 ## Configuration
-<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/cloudflare.png"><br>
 <img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole1.png"><br>
 <img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole2.png"><br><br>
-
-Check if everything is fine here: https://www.cloudflare.com/ssl/encrypted-sni/
-<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/check.png"><br>
