@@ -9,7 +9,7 @@
 
 ## Installation
 ```bash
-curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master/-install | bash
+curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master/dnscrypt-proxy-pihole-install | bash
 ```
 
 ## Configuration
