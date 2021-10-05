@@ -5,7 +5,7 @@
 * [Configuration](#configuration)
 
 ## Overview
-<b>Preconfigured deb package for every Raspberry Pi and Pi-hole to use only best DNSCrypt, DNS-over-HTTPS and  No-Log servers</b><br>
+<b>Preconfigured deb package for every Raspberry Pi and Pi-hole to use only best DNSCrypt, DNS-over-HTTPS and No-Log servers</b><br>
 
 ## Installation
 ```bash
