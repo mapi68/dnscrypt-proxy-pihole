@@ -14,4 +14,5 @@ curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master
 
 ## Configuration
 <img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole1.png"><br>
-<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole2.png"><br><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole2.png"><br>
+<img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/dnssec.png"><br><br>
