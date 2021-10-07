@@ -16,4 +16,4 @@ curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master
 <img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole1.png"><br>
 <img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole3.png"><br>
 <img src="https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/dnssec.png" align="left"/><br><br><br><br><br><br><br><br><br>
-https://dnssec.vs.uni-due.de<br>
+<a href="https://dnssec.vs.uni-due.de">https://dnssec.vs.uni-due.de</a><br>
