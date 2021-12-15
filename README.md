@@ -13,8 +13,8 @@ curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master
 ```
 
 ## Configuration
-![pihole port](https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole1.png)
-![pihole advanced dns settings](https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/pihole3.png)
-![dnssec](https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/images/dnssec.png)
+![pihole port](images/pihole1.png)
+![pihole advanced dns settings](images/pihole3.png)
+![dnssec](images/dnssec.png)
 
 [DNSSEC Resolver Test](https://dnssec.vs.uni-due.de)
