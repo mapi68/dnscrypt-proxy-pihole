@@ -1,16 +1,22 @@
 # dnscrypt-proxy-pihole
 
 * [Overview](#overview)
-* [Installation](#installation)
+* [Installa](#install)
+* [Uninstall](#uninstall)
 * [Configuration](#configuration)
 
 ## Overview
 **Preconfigured deb package for every Raspberry Pi and Pi-hole to use only best DNSCrypt, DNS-over-HTTPS and No-Log servers.**
 
-## Installation
+## Install
 ```bash
 curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master/dnscrypt-proxy-pihole-install | bash
 ```
+## Uninstall
+```bash
+sudo apt --purge remove dnscrypt-proxy-pihole -y
+```
+
 
 ## Configuration
 ![pihole port](images/pihole1.png)
