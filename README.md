@@ -1,7 +1,7 @@
 # dnscrypt-proxy-pihole
 
 * [Overview](#overview)
-* [Installa](#install)
+* [Install](#install)
 * [Uninstall](#uninstall)
 * [Configuration](#configuration)
 
