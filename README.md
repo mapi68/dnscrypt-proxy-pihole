@@ -19,13 +19,6 @@ sudo apt --purge remove dnscrypt-proxy-pihole -y
 
 
 ## Configuration
-![configure](images/configure.png)
-
-After installation you can reconfigure dnscrypt-proxy-pihole with:
-```bash
-sudo dpkg-reconfigure dnscrypt-proxy-pihole
-```
-
 ![pihole port](images/pihole1.png)
 ![pihole advanced dns settings](images/pihole3.png)
 ![dnssec](images/dnssec.png)
