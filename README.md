@@ -27,7 +27,7 @@ sudo apt --purge remove dnscrypt-proxy-pihole -y
 ## Check
 Check if dnscrypt-proxy-pihole works and resolves DNS names:
 ```bash
-clear && tail -f -n 10 /var/log/dnscrypt-proxy/query.log
+tail -f -n 20 /var/log/dnscrypt-proxy/query.log
 ```
 
 
