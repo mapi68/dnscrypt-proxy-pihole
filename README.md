@@ -7,7 +7,7 @@
 * [Check](#check)
 
 ## Overview
-**Preconfigured deb package for every Raspberry Pi and Pi-hole to use only best DNSCrypt, DNS-over-HTTPS and No-Log servers.**
+**Preconfigured deb package for every Raspberry Pi and Pi-hole to use only best DNSCrypt, DNS-over-HTTPS and No-Log servers. Optimised for Raspberry Pi OS 11 (bullseye) armhf (32bit).**
 
 ## Install
 ```bash
