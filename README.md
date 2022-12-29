@@ -31,7 +31,7 @@ tail -f -n 20 /var/log/dnscrypt-proxy/query.log
 ```
 Check server with the lowest initial latency:
 ```bash
-cat /var/log/syslog | grep dnscrypt-proxy
+sed -i '/dnscrypt-proxy/d' /var/log/syslog && cat /var/log/syslog | grep dnscrypt-proxy
 ```
 
 
