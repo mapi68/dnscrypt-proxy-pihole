@@ -37,4 +37,4 @@ cat /var/log/syslog | grep dnscrypt-proxy
 
 ![dnssec](images/dnssec.png)
 
-[DNSSEC Resolver Test](https://dnssec.vs.uni-due.de)
+[Browsing Experience Security Check](https://www.cloudflare.com/ssl/encrypted-sni)
