@@ -7,7 +7,7 @@
 * [Check](#check)
 
 ## Overview
-**Preconfigured deb package for every Raspberry Pi and Pi-hole, optimized for Raspberry Pi OS 11 (bullseye) armhf (32bit). The package is designed to use only the best DNSCrypt, DNS-over-HTTPS, and No-Log servers**
+**Preconfigured deb package for every Raspberry Pi and Pi-hole, optimized for Raspberry Pi OS 11 (bullseye) and 12 (bookworm) armhf (32bit). The package is designed to use only the best DNSCrypt, DNS-over-HTTPS, and No-Log servers**
 
 ## Install
 ```bash
@@ -31,7 +31,7 @@ tail -f /var/log/dnscrypt-proxy/query.log
 ```
 Check server with the lowest initial latency:
 ```bash
-cat /var/log/syslog | grep dnscrypt-proxy
+journalctl -u dnscrypt-proxy
 ```
 
 
