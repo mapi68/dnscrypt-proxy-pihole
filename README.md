@@ -31,7 +31,7 @@ tail -f /var/log/dnscrypt-proxy/query.log
 ```
 Check server with the lowest initial latency:
 ```bash
-journalctl -u dnscrypt-proxy
+journalctl -f -u dnscrypt-proxy
 ```
 
 
