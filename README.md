@@ -1,20 +1,20 @@
 # 🛡️ dnscrypt-proxy-pihole
 
 <div align="center">
-  
+
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Pi-hole Compatible](https://img.shields.io/badge/Pi--hole-Compatible-green.svg)](https://pi-hole.net/)
   [![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-OS%2012-red.svg)](https://www.raspberrypi.org/)
-  
+
   <p>
     <img src="https://img.shields.io/badge/Enhanced%20Security-DNSCrypt-brightgreen" alt="DNSCrypt"/>
     <img src="https://img.shields.io/badge/Supports-DNS--over--HTTPS-orange" alt="DoH"/>
     <img src="https://img.shields.io/badge/Privacy-No--Logs-blueviolet" alt="No Logs"/>
   </p>
-  
+
   <br/>
   <h3>📢 Secure DNS solution for your Raspberry Pi & Pi-hole setup</h3>
-  
+
 </div>
 
 ---
@@ -22,18 +22,18 @@
 ## 📋 Table of Contents
 
 <div align="center">
-  
-  [🔍 Overview](#overview) • 
-  [🚀 Install](#install) • 
-  [🗑️ Uninstall](#uninstall) • 
-  [⚙️ Configuration](#configuration) • 
+
+  [🔍 Overview](#overview) •
+  [🚀 Install](#install) •
+  [🗑️ Uninstall](#uninstall) •
+  [⚙️ Configuration](#configuration) •
   [🔐 Check](#check)
-  
+
 </div>
 
 ---
 
-## 🔍 Overview {#overview}
+## 🔍 Overview <a name="overview"></a>
 
 <div class="feature-box" align="center">
   <table>
@@ -49,13 +49,13 @@
 
 <div class="version-box">
   <h4>📌 Version Compatibility:</h4>
-  
+
   ⚠️ **DEPRECATED:** [Raspberry Pi OS 11 (bullseye)](https://github.com/mapi68/dnscrypt-proxy-pihole/raw/refs/heads/master/dnscrypt-proxy-pihole_bullseye_armhf.deb)
   > Historical note: Raspberry Pi OS 11 used DNS server at `127.0.0.1#53533`
-  
+
   ✅ **SUPPORTED:** [Raspberry Pi OS 12 (bookworm)](dnscrypt-proxy-pihole_latest_armhf.deb)
   > Current version works with Pi-hole v6 using DNS server at `127.0.0.1#5335`
-  
+
   📋 **Platform support:** armhf (32-bit) architecture only
 </div>
 
@@ -84,25 +84,25 @@
 
 ---
 
-## 🚀 Install {#install}
+## 🚀 Install <a name="install"></a>
 
 <div align="center">
   <p>One-command installation:</p>
-  
+
   ```bash
   curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master/dnscrypt-proxy-pihole-install | bash
   ```
-  
+
   <p><i>The script handles all dependencies and configuration automatically</i></p>
 </div>
 
 ---
 
-## 🗑️ Uninstall {#uninstall}
+## 🗑️ Uninstall <a name="uninstall"></a>
 
 <div align="center">
   <p>Remove completely with:</p>
-  
+
   ```bash
   sudo apt --purge remove dnscrypt-proxy-pihole -y
   ```
@@ -110,7 +110,7 @@
 
 ---
 
-## ⚙️ Configuration {#configuration}
+## ⚙️ Configuration <a name="configuration"></a>
 
 ### Pi-hole Settings
 
@@ -128,7 +128,7 @@
 
 <div class="config-box">
   <h4>🔧 Required Configuration:</h4>
-  
+
   - **DNS Server:** `127.0.0.1#5335` for Pi-hole v6
   - **DNSSEC:** Disable DNSSEC in Pi-hole settings (handled by dnscrypt-proxy)
   - **Important:** Make sure "Use DNSSEC" option in Pi-hole is turned OFF
@@ -136,19 +136,19 @@
 
 ---
 
-## 🔐 Check {#check}
+## 🔐 Check <a name="check"></a>
 
 <div class="check-box">
   <h4>📊 Verification Methods:</h4>
-  
+
   <h5>Check DNS resolution:</h5>
-  
+
   ```bash
   tail -f /var/log/dnscrypt-proxy/query.log
   ```
-  
+
   <h5>Check server with the lowest initial latency:</h5>
-  
+
   ```bash
   journalctl -f -u dnscrypt-proxy
   ```
