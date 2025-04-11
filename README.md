@@ -51,10 +51,10 @@
   <h4>📌 Version Compatibility:</h4>
 
   ⚠️ **DEPRECATED:** [Raspberry Pi OS 11 (bullseye)](https://github.com/mapi68/dnscrypt-proxy-pihole/raw/refs/heads/master/dnscrypt-proxy-pihole_bullseye_armhf.deb)
-  > Historical note: Raspberry Pi OS 11 used DNS server at `127.0.0.1#53533`
+  > Uses DNS server on `127.0.0.1#53533` (same port as current version)
 
   ✅ **SUPPORTED:** [Raspberry Pi OS 12 (bookworm)](dnscrypt-proxy-pihole_latest_armhf.deb)
-  > Current version works with Pi-hole v6 using DNS server at `127.0.0.1#53533`
+  > Works with Pi-hole v6 using DNS server on `127.0.0.1#53533`
 
   📋 **Platform support:** armhf (32-bit) architecture only
 </div>
