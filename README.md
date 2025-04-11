@@ -120,7 +120,7 @@
       <td align="center">
         <img src="images/pihole1.png" alt="Pi-hole DNS Settings" width="500px"/>
         <br/>
-        <em>Configure Pi-hole to use local DNS at port 5335</em>
+        <em>Configure Pi-hole to use local DNS at port 53533</em>
       </td>
     </tr>
   </table>
@@ -129,7 +129,7 @@
 <div class="config-box">
   <h4>🔧 Required Configuration:</h4>
 
-  - **DNS Server:** `127.0.0.1#5335` for Pi-hole v6
+  - **DNS Server:** `127.0.0.1#53533` for Pi-hole v6
   - **DNSSEC:** Disable DNSSEC in Pi-hole settings (handled by dnscrypt-proxy)
   - **Important:** Make sure "Use DNSSEC" option in Pi-hole is turned OFF
 </div>
