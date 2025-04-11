@@ -54,7 +54,7 @@
   > Historical note: Raspberry Pi OS 11 used DNS server at `127.0.0.1#53533`
 
   ✅ **SUPPORTED:** [Raspberry Pi OS 12 (bookworm)](dnscrypt-proxy-pihole_latest_armhf.deb)
-  > Current version works with Pi-hole v6 using DNS server at `127.0.0.1#5335`
+  > Current version works with Pi-hole v6 using DNS server at `127.0.0.1#53533`
 
   📋 **Platform support:** armhf (32-bit) architecture only
 </div>
