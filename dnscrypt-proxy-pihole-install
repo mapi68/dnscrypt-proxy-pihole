@@ -1,0 +1,6 @@
+#!/bin/bash
+
+DPP=dnscrypt-proxy-pihole
+
+wget -P /tmp/ https://github.com/mapi68/"$DPP"/raw/master/"$DPP"_latest_armhf.deb
+sudo apt install -qq -y /tmp/"$DPP"_latest_armhf.deb; rm -rf /tmp/"$DPP"_latest_armhf*
