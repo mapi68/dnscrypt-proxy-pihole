@@ -199,7 +199,7 @@ sudo apt-get install -f
   <table>
     <tr>
       <td align="center">
-        <img src="images/pihole1.png" alt="Pi-hole DNS Settings" width="500px"/>
+        <img src="images/pihole1.png" alt="Pi-hole DNS Settings" width="600px"/>
         <br/>
         <em>Pi-hole DNS Configuration</em>
       </td>
@@ -214,38 +214,44 @@ sudo apt-get install -f
 
 ## 🔐 Verification <a name="verification"></a>
 
-### System Checks
-
-1. **DNS Resolution:**
+### DNS Resolution:
 ```bash
 tail -f /var/log/dnscrypt-proxy/query.log
 ```
 
-2. **Service Status:**
+### Service Status:
 ```bash
 journalctl -f -u dnscrypt-proxy
 ```
 
-3. **DNSSEC Test:**
+### DNSSEC Validation Check (The Security Test):
 ```bash
 dig +dnssec google.com @127.0.0.1 -p 53533
 ```
+**Expected Status:** `status: NOERROR`  
+**Security Confirmation:** Confirms connectivity and successful resolution of a signed domain.
+
+```bash
+dig dnssec-failed.org @127.0.0.1 -p 53533
+```
+**Expected Status:** `status: SERVFAIL`  
+**Security Confirmation:** **Confirms active DNSSEC Validation.** The resolver blocks the corrupt signature, protecting the system.
+
+### Online Tests
+- [DNSLeakTest](https://www.dnsleaktest.com)
+- [Cloudflare ESNI Check](https://www.cloudflare.com/ssl/encrypted-sni)
 
 <div align="center">
   <table>
     <tr>
       <td align="center">
-        <img src="images/dnssec.png" alt="DNSSEC Validation" width="500px"/>
+        <img src="images/dnssec.png" alt="DNSSEC Validation" width="700px"/>
         <br/>
-        <em>Successful DNSSEC Validation</em>
+        <em>Successful Cloudflare DNSSEC Validation</em>
       </td>
     </tr>
   </table>
 </div>
-
-### Online Tests
-- [DNSLeakTest](https://www.dnsleaktest.com)
-- [Cloudflare ESNI Check](https://www.cloudflare.com/ssl/encrypted-sni)
 
 ## 🗑️ Uninstall <a name="uninstall"></a>
 
