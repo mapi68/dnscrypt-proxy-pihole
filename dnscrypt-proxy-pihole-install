@@ -2,5 +2,48 @@
 
 DPP=dnscrypt-proxy-pihole
 
-wget -P /tmp/ https://github.com/mapi68/"$DPP"/raw/master/"$DPP"_latest_armhf.deb
-sudo apt install -qq -y /tmp/"$DPP"_latest_armhf.deb; rm -rf /tmp/"$DPP"_latest_armhf*
+ARCH=$(dpkg --print-architecture)
+
+if [ "$ARCH" = "armhf" ] || [ "$ARCH" = "arm64" ]; then
+    DEB_FILE="${DPP}_latest_${ARCH}.deb"
+
+    echo "== $DPP - Adaptive Installation =="
+    echo "Detected architecture: $ARCH"
+    echo "Selected .deb file: $DEB_FILE"
+
+    URL="https://github.com/mapi68/$DPP/raw/master/$DEB_FILE"
+    TEMP_PATH="/tmp/$DEB_FILE"
+
+    echo "Starting download from $URL..."
+    wget -P /tmp/ "$URL"
+
+    if [ $? -ne 0 ]; then
+        echo "ERROR: Package download failed. Check the URL or your connection."
+        exit 1
+    fi
+
+    echo "Installing package and resolving dependencies with apt..."
+    sudo apt install -qq -y "$TEMP_PATH"
+
+    INSTALL_STATUS=$?
+
+    echo "Cleaning up temporary file $TEMP_PATH..."
+    rm -f "$TEMP_PATH"
+
+    if [ $INSTALL_STATUS -eq 0 ]; then
+        echo "========================================================================================="
+        echo "Installation of $DPP completed successfully for architecture $ARCH."
+        echo "========================================================================================="
+    else
+        echo "WARNING: Package installation reported an error ($INSTALL_STATUS)."
+        exit $INSTALL_STATUS
+    fi
+
+else
+    echo "======================================================================"
+    echo "CRITICAL ERROR: System architecture is not supported by this script."
+    echo "Detected: $ARCH. Supported architectures are 'armhf' and 'arm64'."
+    echo "Cannot proceed with installation."
+    echo "======================================================================"
+    exit 1
+fi
