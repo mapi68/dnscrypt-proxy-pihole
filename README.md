@@ -128,7 +128,7 @@ sudo apt-get install -f
   - Auto-detects system architecture
   - Downloads latest version from Debian repos
   - Handles all dependencies
-  - Multi-architecture support (amd64, arm64, armhf, i386)
+  - Multi-architecture support (amd64, arm64, armhf, ...)
 
   **Usage:**
   ```bash
@@ -169,7 +169,7 @@ sudo apt-get install -f
     </tr>
     <tr>
       <td><code>dnscrypt-proxy-pihole-install</code></td>
-      <td>Installs pre-configured package (dnscrypt-proxy-pihole_latest_armhf.deb)</td>
+      <td>Installs pre-configured package</td>
       <td>For quick, automated setup</td>
     </tr>
     <tr>
