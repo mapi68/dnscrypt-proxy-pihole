@@ -51,8 +51,8 @@ A preconfigured DNSCrypt-proxy package for Raspberry Pi and Pi-hole users that e
 ### 📦 Compatibility
 
 ✅ **CURRENT VERSION:**
-- [Raspberry Pi OS 13 (trixie 64bit)](dnscrypt-proxy-pihole_latest_arm64.deb)
-- [Raspberry Pi OS 12 (bookworm 32bit)](dnscrypt-proxy-pihole_latest_armhf.deb)
+- [Raspberry Pi OS 13 (trixie 64bit)](https://github.com/mapi68/dnscrypt-proxy-pihole/raw/refs/heads/master/dnscrypt-proxy-pihole_latest_arm64.deb)
+- [Raspberry Pi OS 12 (bookworm 32bit)](https://github.com/mapi68/dnscrypt-proxy-pihole/raw/refs/heads/master/dnscrypt-proxy-pihole_latest_armhf.deb)
 - Pi-hole v6.0+
 - DNS server: `127.0.0.1#53533`
 
