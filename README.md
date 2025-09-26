@@ -256,5 +256,5 @@ dig dnssec-failed.org @127.0.0.1 -p 53533
 
 Remove completely with:
 ```bash
-sudo apt --purge remove dnscrypt-proxy-pihole -y
+sudo apt --purge autoremove dnscrypt-proxy-pihole -y
 ```
