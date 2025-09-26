@@ -4,7 +4,7 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Pi-hole Compatible](https://img.shields.io/badge/Pi--hole-Compatible-green.svg)](https://pi-hole.net/)
-  [![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-OS%2012-red.svg)](https://www.raspberrypi.org/)
+  [![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-OS%2011%7C12%7C13-red.svg)](https://www.raspberrypi.org/)
 
   <p>
     <img src="https://img.shields.io/badge/Enhanced%20Security-DNSCrypt-brightgreen" alt="DNSCrypt"/>
