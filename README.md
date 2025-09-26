@@ -30,8 +30,7 @@
   [📜 Scripts](#scripts) •
   [⚙️ Configuration](#configuration) •
   [🔐 Verification](#verification) •
-  [🗑️ Uninstall](#uninstall) •
-  [❓ FAQ](#faq)
+  [🗑️ Uninstall](#uninstall)
 
 </div>
 
@@ -259,17 +258,3 @@ Remove completely with:
 ```bash
 sudo apt --purge remove dnscrypt-proxy-pihole -y
 ```
-
-## ❓ FAQ <a name="faq"></a>
-
-**Q: Why use this with Pi-hole?**
-- Adds DNS encryption to Pi-hole's ad-blocking capabilities
-
-**Q: Performance impact?**
-- Minimal; optimized for Raspberry Pi
-
-**Q: Custom DNS servers?**
-- Edit `/etc/dnscrypt-proxy/dnscrypt-proxy.toml`
-
-**Q: Update procedure?**
-- Run `install-latest-dnscrypt-proxy.bash`
