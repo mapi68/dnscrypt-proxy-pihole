@@ -69,50 +69,40 @@ fi
 # Create the new configuration file
 echo -e "${YELLOW}[STEP]${NC} Creating configuration file..."
 cat > /etc/dnscrypt-proxy/dnscrypt-proxy.toml << 'EOL'
-##########################################
-#        GLOBAL SETTINGS                 #
-##########################################
-
-# Server addresses and networking
+#################################
+#        Global settings        #
+#################################
 listen_addresses = ['127.0.0.1:53533']
-bootstrap_resolvers = [
-    "1.1.1.1:53",
-    "8.8.8.8:53",
-    "9.9.9.9:53",
-]
+bootstrap_resolvers = ['1.1.1.1:53', '8.8.8.8:53', '9.9.9.9:53']
 ignore_system_dns = true
 max_clients = 250
-
-# Protocol settings
 force_tcp = false
 ipv4_servers = true
 ipv6_servers = false
 dnscrypt_servers = true
 doh_servers = true
 odoh_servers = false
-
-# Security requirements
 require_dnssec = true
 require_nolog = true
 require_nofilter = true
+lb_strategy = 'p15'
+lb_estimator = true
+block_unqualified = true
+block_undelegated = true
 
-
-##########################################
-#        DNS CACHE                       #
-##########################################
-
+###########################
+#        DNS cache        #
+###########################
 cache = true
 cache_size = 10000
-cache_min_ttl = 86400
-cache_max_ttl = 345600
-cache_neg_min_ttl = 900
-cache_neg_max_ttl = 3600
+cache_min_ttl = 7200
+cache_max_ttl = 86400
+cache_neg_min_ttl = 1800
+cache_neg_max_ttl = 7200
 
-
-##########################################
-#        LOGS                            #
-##########################################
-
+#####################
+#        Log        #
+#####################
 log_files_max_size = 20
 log_files_max_age = 10
 
@@ -122,26 +112,20 @@ file = '/var/log/dnscrypt-proxy/query.log'
 [nx_log]
 file = '/var/log/dnscrypt-proxy/nx.log'
 
-
-##########################################
-#        PUBLIC RESOLVERS AND RELAYS     #
-##########################################
+#############################################
+#        Public Resolvers and Relays        #
+#############################################
+[sources]
 
 [sources.public-resolvers]
-urls = [
-	'https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md',
-	'https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md'
-]
+urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md', 'https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md']
 cache_file = '/var/cache/dnscrypt-proxy/public-resolvers.md'
 minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
 refresh_delay = 73
 prefix = ''
 
 [sources.relays]
-urls = [
-	'https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/relays.md',
-	'https://download.dnscrypt.info/resolvers-list/v3/relays.md'
-]
+urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/relays.md', 'https://download.dnscrypt.info/resolvers-list/v3/relays.md']
 cache_file = '/var/cache/dnscrypt-proxy/relays.md'
 minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
 refresh_delay = 73
