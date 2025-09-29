@@ -102,18 +102,6 @@ A preconfigured DNSCrypt-proxy package for Raspberry Pi and Pi-hole users that e
 curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/master/dnscrypt-proxy-pihole-install | bash
 ```
 
-### Manual Installation
-```bash
-# Download latest package
-wget https://github.com/mapi68/dnscrypt-proxy-pihole/raw/master/dnscrypt-proxy-pihole_latest_$(dpkg --print-architecture).deb
-
-# Install package
-sudo dpkg -i dnscrypt-proxy-pihole_latest_$(dpkg --print-architecture).deb
-
-# Install dependencies if needed
-sudo apt-get install -f
-```
-
 ## 📜 Scripts <a name="scripts"></a>
 
 ### 1. `install-latest-dnscrypt-proxy.bash`
