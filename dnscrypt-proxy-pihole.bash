@@ -25,19 +25,12 @@ echo -e "║                                                ║"
 echo -e "╚════════════════════════════════════════════════╝"
 echo -e "${NC}"
 
-# Check if the script is run as root
-if [ "$EUID" -ne 0 ]; then
-	echo -e "${RED}[ERROR]${NC} This script must be run as root."
-	echo -e
-	exit 1
-fi
-
 # Variable for the package name
 PACKAGE_NAME="dnscrypt-proxy"
 
 # Function to check if a package is installed
 is_installed() {
-	dpkg -s "$1" > /dev/null 2>&1
+	sudo dpkg -s "$1" > /dev/null 2>&1
 	return $?
 }
 
@@ -46,7 +39,7 @@ if is_installed "$PACKAGE_NAME"; then
 	echo -e "${GREEN}[INFO]${NC} $PACKAGE_NAME is already installed. Proceeding with the script..."
 else
 	# Check if the package exists in the repository and attempt installation
-	if apt update && apt install -y "$PACKAGE_NAME"; then
+	if sudo apt update && sudo apt install -y "$PACKAGE_NAME"; then
 		echo -e "${LIGHT_BLUE}[INFO]${NC} $PACKAGE_NAME installed successfully. Proceeding with the script..."
 	else
 		echo -e
@@ -59,7 +52,7 @@ fi
 # Backup the original configuration file if backup doesn't already exist
 if [ -f /etc/dnscrypt-proxy/dnscrypt-proxy.toml ]; then
 	if [ ! -f /etc/dnscrypt-proxy/dnscrypt-proxy.toml.bak ]; then
-		cp /etc/dnscrypt-proxy/dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml.bak
+		sudo cp /etc/dnscrypt-proxy/dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml.bak
 		echo -e "${GREEN}[OK]${NC} Backup of the original configuration file created in /etc/dnscrypt-proxy/dnscrypt-proxy.toml.bak"
 	else
 		echo -e "${YELLOW}[INFO]${NC} Backup file /etc/dnscrypt-proxy/dnscrypt-proxy.toml.bak already exists, preserving it"
@@ -68,7 +61,7 @@ fi
 
 # Create the new configuration file
 echo -e "${YELLOW}[STEP]${NC} Creating configuration file..."
-cat > /etc/dnscrypt-proxy/dnscrypt-proxy.toml << 'EOL'
+sudo cat > /etc/dnscrypt-proxy/dnscrypt-proxy.toml << 'EOL'
 #################################
 #        Global settings        #
 #################################
@@ -137,8 +130,8 @@ echo -e "${GREEN}[OK]${NC} Configuration file created in /etc/dnscrypt-proxy/dns
 # Modify the socket unit file
 echo -e "${YELLOW}[STEP]${NC} Modifying socket unit file..."
 if [ -f /lib/systemd/system/dnscrypt-proxy.socket ]; then
-	sed -i "s#^\(ListenStream=127.0.2.1:\)[0-9]\+#\153533#g" /lib/systemd/system/dnscrypt-proxy.socket
-	sed -i "s#^\(ListenDatagram=127.0.2.1:\)[0-9]\+#\153533#g" /lib/systemd/system/dnscrypt-proxy.socket
+	sudo sed -i "s#^\(ListenStream=127.0.2.1:\)[0-9]\+#\153533#g" /lib/systemd/system/dnscrypt-proxy.socket
+	sudo sed -i "s#^\(ListenDatagram=127.0.2.1:\)[0-9]\+#\153533#g" /lib/systemd/system/dnscrypt-proxy.socket
 	echo -e "${GREEN}[OK]${NC} Socket unit file modified successfully"
 else
 	echo -e "${RED}[WARNING]${NC} Socket unit file not found at /lib/systemd/system/dnscrypt-proxy.socket"
@@ -148,17 +141,17 @@ fi
 
 # Configure correct permissions
 echo -e "${YELLOW}[STEP]${NC} Setting up permissions..."
-chown -R dnscrypt:dnscrypt /etc/dnscrypt-proxy 2>/dev/null || \
-	chown -R _dnscrypt-proxy:_dnscrypt-proxy /etc/dnscrypt-proxy 2>/dev/null || \
-	chown -R nobody:nogroup /etc/dnscrypt-proxy
+sudo chown -R dnscrypt:dnscrypt /etc/dnscrypt-proxy 2>/dev/null || \
+	sudo chown -R _dnscrypt-proxy:_dnscrypt-proxy /etc/dnscrypt-proxy 2>/dev/null || \
+	sudo chown -R nobody:nogroup /etc/dnscrypt-proxy
 
 # Enable and restart the socket and service
 echo -e "${YELLOW}[STEP]${NC} Restarting services..."
-systemctl daemon-reload
-systemctl enable dnscrypt-proxy.socket
-systemctl enable dnscrypt-proxy
-systemctl restart dnscrypt-proxy.socket
-systemctl restart dnscrypt-proxy
+sudo systemctl daemon-reload
+sudo systemctl enable dnscrypt-proxy.socket
+sudo systemctl enable dnscrypt-proxy
+sudo systemctl restart dnscrypt-proxy.socket
+sudo systemctl restart dnscrypt-proxy
 
 # Check service status
 sleep 2
