@@ -154,6 +154,7 @@ sudo apt-get install -f
   wget https://github.com/mapi68/dnscrypt-proxy-pihole/blob/master/dnscrypt-proxy-pihole.bash
   chmod 755 dnscrypt-proxy-pihole.bash
   sudo ./dnscrypt-proxy-pihole.bash
+  rm dnscrypt-proxy-pihole.bash
   ```
 </div>
 
