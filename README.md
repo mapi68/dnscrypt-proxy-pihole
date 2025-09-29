@@ -131,10 +131,8 @@ sudo apt-get install -f
 
   **Usage:**
   ```bash
-  ./install-latest-dnscrypt-proxy.bash
-  # Or specify architecture:
-  ./install-latest-dnscrypt-proxy.bash armhf
-  ```
+  curl -sSfL https://raw.githubusercontent.com/mapi68/dnscrypt-proxy-pihole/refs/heads/master/install-latest-dnscrypt-proxy.bash | bash
+   ```
 </div>
 
 ### 2. `dnscrypt-proxy-pihole.bash`
@@ -153,7 +151,10 @@ sudo apt-get install -f
 
   **Usage:**
   ```bash
+  wget https://github.com/mapi68/dnscrypt-proxy-pihole/blob/master/dnscrypt-proxy-pihole.bash
+  chmod +x dnscrypt-proxy-pihole.bash
   sudo ./dnscrypt-proxy-pihole.bash
+  rm dnscrypt-proxy-pihole.bash
   ```
 </div>
 
