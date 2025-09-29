@@ -132,8 +132,6 @@ sudo apt-get install -f
   **Usage:**
   ```bash
   ./install-latest-dnscrypt-proxy.bash
-  # Or specify architecture:
-  ./install-latest-dnscrypt-proxy.bash armhf
   ```
 </div>
 
