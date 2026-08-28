@@ -1,0 +1,33 @@
+#!/bin/bash
+
+DPP=dnscrypt-proxy-pihole
+
+ARCH=$(dpkg --print-architecture)
+
+if [ "$ARCH" = "armhf" ] || [ "$ARCH" = "arm64" ]; then
+    DEB_FILE="${DPP}_latest_${ARCH}.deb"
+
+    URL="https://github.com/mapi68/$DPP/raw/master/$DEB_FILE"
+    TEMP_PATH="/tmp/$DEB_FILE"
+
+    wget -P /tmp/ "$URL"
+
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
+
+    sudo apt install -qq -y "$TEMP_PATH"
+
+    INSTALL_STATUS=$?
+
+    rm -f "$TEMP_PATH"
+
+    if [ $INSTALL_STATUS -eq 0 ]; then
+        exit 0
+    else
+        exit $INSTALL_STATUS
+    fi
+
+else
+    exit 1
+fi
